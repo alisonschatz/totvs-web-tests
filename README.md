@@ -1,6 +1,10 @@
 # totvs-web-tests
 
-Suite de testes automatizados end-to-end e de API para a plataforma [automationexercise.com](https://automationexercise.com), cobrindo fluxos críticos de registro de usuário, manipulação de carrinho e validação de endpoints REST.
+Suite de testes automatizados para a plataforma [automationexercise.com](https://automationexercise.com), composta por três cenários:
+ 
+- **Registro E2E** — automatiza o fluxo completo de criação de conta com dados dinâmicos, validando a mensagem de sucesso "ACCOUNT CREATED!"
+- **Carrinho de compras** — adiciona 4 unidades de um produto e valida se a quantidade e o valor total estão corretos no resumo da compra
+- **API de produtos** — valida o endpoint `GET /api/productsList`, confirmando status 200 e que a lista retornada contém produtos com estrutura válida
 
 ## Tecnologias
 
