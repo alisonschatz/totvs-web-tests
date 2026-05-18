@@ -58,16 +58,6 @@ npm run test:ui           # UI Mode do Playwright (recomendado para debug)
 # Relatório HTML
 npm run report
 ```
-
-## .gitignore
-
-```
-node_modules/
-test-results/
-playwright-report/
-.playwright/
-```
-
 ---
 
 This is a challenge by Coodesh
