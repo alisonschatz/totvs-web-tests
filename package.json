@@ -1,0 +1,19 @@
+{
+  "name": "totvs-web-tests",
+  "version": "1.0.0",
+  "description": "Suite de testes E2E e API para automationexercise.com — Grupo Supero / TOTVS",
+  "scripts": {
+    "test": "playwright test",
+    "test:registration": "playwright test tests/registration.spec.js",
+    "test:cart": "playwright test tests/cart.spec.js",
+    "test:api": "playwright test tests/api-products.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@playwright/test": "^1.52.0"
+  },
+  "license": "MIT"
+}
