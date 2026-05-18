@@ -1,7 +1,6 @@
 const { BasePage } = require('./base.page');
 
 class ProductsPage extends BasePage {
-  /** @param {import('@playwright/test').Page} page */
   constructor(page) {
     super(page);
     this.productCards = page.locator('.productinfo');
@@ -20,6 +19,7 @@ class ProductsPage extends BasePage {
 
     await this.page.waitForLoadState('domcontentloaded');
     await this.dismissAdIfPresent();
+    await this.dismissAdIfPresent();
 
     const qtyInput  = this.page.locator('#quantity');
     const addToCart = this.page.getByRole('button', { name: /add to cart/i });
@@ -28,8 +28,9 @@ class ProductsPage extends BasePage {
     await qtyInput.selectText();
     await qtyInput.fill(String(quantity));
 
-    await this.waitForVisible(addToCart);
-    await addToCart.click();
+    await this.waitForVisible(addToCart);  
+    await addToCart.scrollIntoViewIfNeeded();
+    await addToCart.click({ force: true });
 
     const modal = this.page.locator('#cartModal');
     await this.waitForVisible(modal);
